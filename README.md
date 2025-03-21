@@ -198,8 +198,5 @@ RedDotSingleton.Instance.Set(ERedDotKeyType.Key1, 1, RedDotFlags.Number);
 - [ ] 支持红点条件配置
 - [ ] 添加红点统计分析 -->
 
-## 📝 致谢
-本项目基于 [RedDotManager](https://github.com/SouthBegonia/RedDotManager) 进行改进开发。感谢原作者的开源贡献。
-
 ## 🔤 字体
 本项目使用 [Maple Font](https://github.com/subframe7536/maple-font) 字体。这是一款开源的等宽编程字体,具有圆角、连字和控制台图标等特性。

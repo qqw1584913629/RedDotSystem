@@ -196,8 +196,5 @@ RedDotSingleton.Instance.Set(ERedDotKeyType.Key1, 1, RedDotFlags.Number);
 - [ ] Support red dot condition configuration
 - [ ] Add red dot statistics analysis -->
 
-## 📝 Acknowledgments
-This project is an improved development based on [RedDotManager](https://github.com/SouthBegonia/RedDotManager). Thanks to the original author for the open-source contribution. 
-
 ## 🔤 Font
 This project uses [Maple Font](https://github.com/subframe7536/maple-font). This is an open-source monospaced programming font with rounded corners, ligatures, and console icons.
