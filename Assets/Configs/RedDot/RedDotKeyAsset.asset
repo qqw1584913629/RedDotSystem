@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a9020a9136f3a44b94da2c2d9315e5, type: 3}
+  m_Name: RedDotKeyAsset
+  m_EditorClassIdentifier: 
+  m_AllRedDotList:
+  - id: 1
+    des: "\u4E3B\u754C\u9762"
+  - id: 2
+    des: "\u65B0\u624B\u4E03\u65E5\u7B7E\u5230"
+  - id: 3
+    des: "\u591A\u7EA7\u83DC\u5355"
+  - id: 4
+    des: "\u6BCF\u65E5\u4EFB\u52A1"
+  - id: 5
+    des: "\u6D3B\u52A8"
+  - id: 6
+    des: "\u901A\u884C\u8BC1"
+  - id: 7
+    des: "\u79BB\u7EBF\u5956\u52B1"
+  - id: 8
+    des: "\u80CC\u5305"
+  - id: 9
+    des: "\u5546\u5E97"
+  - id: 10
+    des: "\u53EC\u5524"
