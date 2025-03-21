@@ -122,7 +122,7 @@ Configure parent-child relationships and display types through `RedDotConfigAsse
 </p>
 
 ## 📝 Usage Example
-> No need to initialize every red dot, just set them when needed and ignore the rest.
+> No need to manually initialize each red dot, just set the quantity when needed.
 ```csharp
 // Initialize red dot information
 public class RedDotSingleton : MonoBehaviour
@@ -169,6 +169,7 @@ public class RedDotSingleton : MonoBehaviour
     //...remaining code
 }
 ```
+> During development, only maintain the number of red dots, and ignore the rest.
 ```csharp
 // Set a standard red dot
 RedDotSingleton.Instance.Set(ERedDotKeyType.Key1, 1, RedDotFlags.Default);

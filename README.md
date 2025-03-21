@@ -124,7 +124,7 @@ git clone git@github.com:qqw1584913629/RedDotSystem.git
 </p>
 
 ## 📝 使用示例
-> 无需每个红点都要初始化，只需要在需要的时候设置即可，其他的不需要关注。
+> 无需每个红点都要手动初始化，只需要在需要的时候设置数量即可。
 ```csharp
 // 初始化红点信息
 public class RedDotSingleton : MonoBehaviour
@@ -171,6 +171,7 @@ public class RedDotSingleton : MonoBehaviour
     //...其余代码
 }
 ```
+> 开发过程中，只需要维护红点的数量即可，其他的不需要关注。
 ```csharp
 // 设置一个普通红点
 RedDotSingleton.Instance.Set(ERedDotKeyType.Key1, 1, RedDotFlags.Default);
