@@ -72,3 +72,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Packages folder
+/[Pp]ackages/*
+# 保留 manifest.json，可以添加以下例外规则
+!/[Pp]ackages/manifest.json
+!/[Pp]ackages/packages-lock.json
