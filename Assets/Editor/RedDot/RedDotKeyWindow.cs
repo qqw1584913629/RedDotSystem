@@ -12,6 +12,7 @@ namespace MH
         private Vector2 m_ScrollPosition;
         private int m_NewId = 1;
         private string m_NewDes = "";
+        private string m_ExportPath = "Assets/Scripts/RedDot/RedDot/"; // 添加导出路径字段
 
         [MenuItem("Tool/RedDot/RedDotKey Editor")]
         private static void ShowWindow()
@@ -73,6 +74,28 @@ namespace MH
 
 
             EditorGUILayout.Space(10);
+            EditorGUILayout.BeginHorizontal();
+            GUI.enabled = false;
+            m_ExportPath = EditorGUILayout.TextField("导出路径", m_ExportPath);
+            GUI.enabled = true;
+            if (GUILayout.Button("选择路径", GUILayout.Width(60)))
+            {
+                string path = EditorUtility.OpenFolderPanel(
+                    "选择枚举文件导出文件夹",
+                    Application.dataPath,
+                    "");
+                
+                if (!string.IsNullOrEmpty(path))
+                {
+                    // 转换为相对于Assets的路径
+                    if (path.StartsWith(Application.dataPath))
+                    {
+                        string relativePath = "Assets" + path.Substring(Application.dataPath.Length);
+                        m_ExportPath = relativePath + "/";
+                    }
+                }
+            }
+            EditorGUILayout.EndHorizontal();
             EditorGUILayout.BeginHorizontal();
             m_NewId = EditorGUILayout.IntField("红点Id", m_NewId);
             m_NewDes = EditorGUILayout.TextField("红点描述", m_NewDes);
@@ -177,7 +200,15 @@ namespace MH
         private void GenerateEnum()
         {
             if (m_Target == null) return;
-            var enumPath = Path.Combine(Application.dataPath, "Scripts", "ETCore", "RedDot", "RedDot", "ERedDotKeyType.cs");
+            if (string.IsNullOrEmpty(m_ExportPath))
+            {
+                EditorUtility.DisplayDialog("错误", "请先设置导出路径", "确定");
+                return;
+            }
+
+            // 构建完整的文件路径
+            string enumFilePath = Path.Combine(m_ExportPath, "ERedDotKeyType.cs");
+            
             var sb = new StringBuilder();
 
             sb.AppendLine("");
@@ -207,13 +238,15 @@ namespace MH
             sb.AppendLine("    }");
             sb.AppendLine("}");
 
-            var directoryPath = Path.GetDirectoryName(enumPath);
+            // 确保目录存在
+            var directoryPath = Path.GetDirectoryName(enumFilePath);
             if (!Directory.Exists(directoryPath))
             {
                 Directory.CreateDirectory(directoryPath);
             }
 
-            File.WriteAllText(enumPath, sb.ToString());
+            // 写入到文件而不是文件夹
+            File.WriteAllText(enumFilePath, sb.ToString());
             AssetDatabase.Refresh();
 
             EditorUtility.DisplayDialog("提示", "枚举生成成功", "确定");

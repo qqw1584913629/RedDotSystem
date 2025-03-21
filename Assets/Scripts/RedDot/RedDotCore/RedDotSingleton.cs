@@ -15,7 +15,8 @@ namespace MH
         { 
             if (_instance == null)
                 _instance = this;
-            _config = Resources.Load<RedDotConfigAsset>(nameof(RedDotConfigAsset));;
+            // todo 根据自己项目的资源管理进行加载就好 这里演示直接Inspector拖动了
+            // _config = Resources.Load<RedDotConfigAsset>(nameof(RedDotConfigAsset));
             InitRedDotTreeNode();
         }
         public void InitRedDotTreeNode()

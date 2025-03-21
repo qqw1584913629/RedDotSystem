@@ -16,20 +16,18 @@ MonoBehaviour:
   - id: 1
     des: "\u4E3B\u754C\u9762"
   - id: 2
-    des: "\u65B0\u624B\u4E03\u65E5\u7B7E\u5230"
+    des: "\u63D0\u5347"
   - id: 3
-    des: "\u591A\u7EA7\u83DC\u5355"
+    des: "\u89D2\u8272\u4FE1\u606F"
   - id: 4
-    des: "\u6BCF\u65E5\u4EFB\u52A1"
-  - id: 5
-    des: "\u6D3B\u52A8"
-  - id: 6
-    des: "\u901A\u884C\u8BC1"
-  - id: 7
-    des: "\u79BB\u7EBF\u5956\u52B1"
-  - id: 8
     des: "\u80CC\u5305"
+  - id: 5
+    des: "\u90AE\u7BB1"
+  - id: 6
+    des: "\u5C5E\u6027\u70B9"
+  - id: 7
+    des: "\u7269\u54C1"
+  - id: 8
+    des: "\u7CFB\u7EDF\u90AE\u4EF6"
   - id: 9
-    des: "\u5546\u5E97"
-  - id: 10
-    des: "\u53EC\u5524"
+    des: "\u4E2A\u4EBA\u90AE\u4EF6"

@@ -18,8 +18,8 @@ namespace MH
         [Header("红点父节点")] [SerializeField] public GameObject m_DotObj;
 
         [Header("红点数文本")] [SerializeField] private TextMeshProUGUI m_DotCountText;
-        [Header("红点类型")] [SerializeField] private ERedDotKeyType m_RedDotType;
-        [Header("红点优先级")] [SerializeField] private RedDotFlags m_Priority;
+        [Header("红点所属键")] [SerializeField] private ERedDotKeyType m_RedDotType;
+        [Header("红点类型")] [SerializeField] private RedDotFlags m_Priority;
         
         #if UNITY_EDITOR
                 private void OnValidate()

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182ab2a5f735605408aa753bb171b2c4, type: 3}
   m_Name: RedDotEditorSettings
   m_EditorClassIdentifier: 
-  redDotKeyAssetPath: Assets/Bundles/RedDot/RedDotKeyAsset.asset
-  redDotConfigAssetPath: Assets/Bundles/RedDot/RedDotConfigAsset.asset
+  redDotKeyAssetPath: Assets/Configs/RedDot/RedDotKeyAsset.asset
+  redDotConfigAssetPath: Assets/Configs/RedDot/RedDotConfigAsset.asset
