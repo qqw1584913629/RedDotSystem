@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DotObj: {fileID: 5726465296460171525}
-  m_DotCountText: {fileID: 4070537112894886338}
+  m_DotCountText: {fileID: 0}
   m_RedDotType: 0
   m_Priority: 0
+  m_ExactMatch: 1

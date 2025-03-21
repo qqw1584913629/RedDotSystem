@@ -80,7 +80,14 @@ namespace MH
                 Debug.LogError($"未找到红点节点: {key}");
             }
         }
-
+        public int GetRedDotInfoCount(ERedDotKeyType key, RedDotFlags redDotFlags)
+        {
+            if (AllRedDotNodes.TryGetValue(key, out var node))
+            {
+                return node.GetCount(redDotFlags);
+            }
+            return 0;
+        }
         public (int count, int priority) GetRedDotInfo(ERedDotKeyType key)
         {
             if (AllRedDotNodes.TryGetValue(key, out var node))

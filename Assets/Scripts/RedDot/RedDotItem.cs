@@ -20,6 +20,7 @@ namespace MH
         [Header("红点数文本")] [SerializeField] private TextMeshProUGUI m_DotCountText;
         [Header("红点所属键")] [SerializeField] private ERedDotKeyType m_RedDotType;
         [Header("红点类型")] [SerializeField] private RedDotFlags m_Priority;
+        [Header("是否精确匹配")] [SerializeField] private bool m_ExactMatch = true;
         
         #if UNITY_EDITOR
                 private void OnValidate()
@@ -46,12 +47,21 @@ namespace MH
         {
             // 获取当前最高优先级的红点类型
             RedDotFlags highestPriority = (RedDotFlags)node.rdPriority;
-            bool shouldShow = node.GetCount(highestPriority) > 0 && highestPriority == m_Priority;
+            bool shouldShow;
+            if (m_ExactMatch)
+            {
+                shouldShow = node.GetCount(highestPriority) > 0 && highestPriority == m_Priority;
+            }
+            else
+            {
+                shouldShow = node.GetCount(highestPriority) > 0 && (highestPriority & m_Priority) != 0;
+            }
+            
             m_DotObj.gameObject.SetActive(shouldShow);
             if (shouldShow && m_DotCountText)
             {
                 m_DotCountText.SetText($"{(node.GetCount(highestPriority) >= 100 ? "99+" : node.GetCount(highestPriority))}");
-                m_DotCountText.gameObject.SetActive(m_Priority == RedDotFlags.Number);
+                m_DotCountText.gameObject.SetActive(highestPriority == RedDotFlags.Number);
             }
         }
 

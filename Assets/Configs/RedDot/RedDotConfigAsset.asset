@@ -15,13 +15,13 @@ MonoBehaviour:
   m_AllRedDotConfigList:
   - key: 1
     parentList: 
-    flags: 2
+    flags: 3
   - key: 2
     parentList: 01000000
     flags: 2
   - key: 4
     parentList: 01000000
-    flags: 6
+    flags: 2
   - key: 5
     parentList: 01000000
     flags: 2
@@ -42,7 +42,7 @@ MonoBehaviour:
     flags: 2
   - key: 10
     parentList: 01000000
-    flags: 10
+    flags: 9
   - key: 11
     parentList: 0a000000
     flags: 1

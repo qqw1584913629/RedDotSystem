@@ -108,16 +108,11 @@ namespace MH
                 }
             }
 
-            bool needUpdate = rdPriority != maxPriority;
-            if (needUpdate)
+            rdPriority = maxPriority;
+            NotifyRedDotCountChange();
+            foreach (var parent in parents)
             {
-                rdPriority = maxPriority;
-                NotifyRedDotCountChange();
-
-                foreach (var parent in parents)
-                {
-                    parent.CheckRedDotCount();
-                }
+                parent.CheckRedDotCount();
             }
         }
 
