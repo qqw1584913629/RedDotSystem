@@ -34,5 +34,14 @@ namespace MH
         [Description("个人邮件")]
         Key9 = 9,
 
+        [Description("商城")]
+        Key10 = 10,
+
+        [Description("抽奖")]
+        Key11 = 11,
+
+        [Description("广告商品")]
+        Key12 = 12,
+
     }
 }

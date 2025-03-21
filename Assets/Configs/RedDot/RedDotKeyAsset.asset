@@ -31,3 +31,9 @@ MonoBehaviour:
     des: "\u7CFB\u7EDF\u90AE\u4EF6"
   - id: 9
     des: "\u4E2A\u4EBA\u90AE\u4EF6"
+  - id: 10
+    des: "\u5546\u57CE"
+  - id: 11
+    des: "\u62BD\u5956"
+  - id: 12
+    des: "\u5E7F\u544A\u5546\u54C1"
