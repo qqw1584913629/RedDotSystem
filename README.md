@@ -2,6 +2,7 @@
     <h1>🔴 RedDotSystem</h1>
     <h2>红点提示系统</h2>
     <p>一个基于 Unity 开发的轻量级、高扩展性的红点提示系统</p>
+    <p><a href="README-EN.md">English Document</a></p>
 </div>
 
 

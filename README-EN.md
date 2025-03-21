@@ -1,6 +1,7 @@
 <div align="center">
     <h1>🔴 RedDotSystem</h1>
     <p>A lightweight, highly extensible red dot notification system developed for Unity</p>
+    <p><a href="README.md">中文文档</a></p>
 </div>
 
 <div align="center">
